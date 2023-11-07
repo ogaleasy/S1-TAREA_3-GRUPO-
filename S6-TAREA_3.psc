@@ -5,7 +5,7 @@ Funcion calcularCostoColas(cantidad)
     Definir iva Como Real
     
     Si cantidad > 23 Entonces
-        costoPorUnidad = 0.5  // Precio por unidad si son más de 23 colas
+        costoPorUnidad = 0.5  // Precio por unidad si son mÃ¡s de 23 colas
 	SiNo
         costoPorUnidad = 0.5 * 1.2  // Precio por unidad con 20% de aumento si son 23 o menos colas
     FinSi
@@ -20,21 +20,21 @@ Funcion calcularCostoColas(cantidad)
     Escribir "Total a pagar: $", costoTotal + iva
 FinFuncion
 
-Funcion ganancia = calcularGananciaUva(tipo, tamaño)
+Funcion ganancia = calcularGananciaUva(tipo, tamaÃ±o)
     Definir precioInicial Como Real
     Definir ganancia Como Real
     
     Si tipo = "A" Entonces
-        Si tamaño = 1 Entonces
-            precioInicial = 20  // Precio inicial para tipo A, tamaño 1
+        Si tamaÃ±o = 1 Entonces
+            precioInicial = 20  // Precio inicial para tipo A, tamaÃ±o 1
 		SiNo
-            precioInicial = 30  // Precio inicial para tipo A, tamaño 2
+            precioInicial = 30  // Precio inicial para tipo A, tamaÃ±o 2
         FinSi
 	SiNo
-        Si tamaño = 1 Entonces
-            precioInicial = 30  // Precio inicial para tipo B, tamaño 1
+        Si tamaÃ±o = 1 Entonces
+            precioInicial = 30  // Precio inicial para tipo B, tamaÃ±o 1
 		SiNo
-            precioInicial = 50  // Precio inicial para tipo B, tamaño 2
+            precioInicial = 50  // Precio inicial para tipo B, tamaÃ±o 2
         FinSi
     FinSi
     
@@ -79,9 +79,9 @@ Funcion esDivisor = verificarRelacionesNumericas(num1, num2, num3, num4)
     mitad = num2 / 2
     
     Si num1 == mitad Entonces
-        Escribir("El número 1 es la mitad del número 2.")
+        Escribir("El nÃºmero 1 es la mitad del nÃºmero 2.")
     Sino
-        Escribir("El número 1 no es la mitad del número 2.")
+        Escribir("El nÃºmero 1 no es la mitad del nÃºmero 2.")
     FinSi
     
     Si num4 % num3 == 0 Entonces
@@ -106,21 +106,21 @@ Funcion nuevoLimite = calcularNuevoLimite(tipoTarjeta)
 			aumentoPorcentaje = 50  // Aumento del 50% para cualquier otro tipo
 	FinSegun
 	
-	nuevoLimite = aumentoPorcentaje / 100 * 20  // Aumento del porcentaje más $20 adicionales
+	nuevoLimite = aumentoPorcentaje / 100 * 20  // Aumento del porcentaje mÃ¡s $20 adicionales
 FinFuncion
 
 Funcion verificarDivisibilidadYRelacion(num1, num2, num3, num4)
 	Definir esDivisor Como Logico
 	Definir esDoble Como Logico
 	
-	// Verifica si el número 1 es divisor del número 3
+	// Verifica si el nÃºmero 1 es divisor del nÃºmero 3
 	Si num3 % num1 == 0 Entonces
 		esDivisor = Verdadero
 	Sino
 		esDivisor = Falso
 	FinSi
 	
-	// Verifica si el número 2 es el doble del número 4
+	// Verifica si el nÃºmero 2 es el doble del nÃºmero 4
 	Si num2 == num4 * 2 Entonces
 		esDoble = Verdadero
 	Sino
@@ -128,22 +128,22 @@ Funcion verificarDivisibilidadYRelacion(num1, num2, num3, num4)
 	FinSi
 	
 	Si Divisor Entonces
-		Escribir "El número 1 es divisor del número 3."
+		Escribir "El nÃºmero 1 es divisor del nÃºmero 3."
 	Sino
-		Escribir "El número 1 no es divisor del número 3."
+		Escribir "El nÃºmero 1 no es divisor del nÃºmero 3."
 	FinSi
 	
 	Si Doble Entonces
-		Escribir "El número 2 es el doble del número 4."
+		Escribir "El nÃºmero 2 es el doble del nÃºmero 4."
 	Sino
-		Escribir "El número 2 no es el doble del número 4."
+		Escribir "El nÃºmero 2 no es el doble del nÃºmero 4."
 	FinSi
 FinFuncion
 
 Funcion aumento = calcularNuevoAumento(tipoTarjeta)
     Definir aumento Como Real
 	
-    // Determina el aumento según el tipo de tarjeta
+    // Determina el aumento segÃºn el tipo de tarjeta
     Segun tipoTarjeta Hacer
         Caso 1:
             aumento = 100
@@ -162,41 +162,41 @@ FinFuncion
 Funcion evaluarNumero(numero)
     // Verifica si es negativo y menor que -20
     Si numero < -20 Entonces
-        Escribir("El número es negativo y menor que -20.")
+        Escribir("El nÃºmero es negativo y menor que -20.")
     Sino
-		// Verifica si es positivo, par o impar y múltiplo de 7
+		// Verifica si es positivo, par o impar y mÃºltiplo de 7
         Si numero > 0 Entonces
             Si numero % 2 == 0 Entonces
-                Escribir("El número es positivo y par.")
+                Escribir("El nÃºmero es positivo y par.")
             Sino
                 Si numero % 7 == 0 Entonces
-                    Escribir("El número es positivo, impar y múltiplo de 7.")
+                    Escribir("El nÃºmero es positivo, impar y mÃºltiplo de 7.")
                 Sino
-                    Escribir("El número es positivo e impar pero no es múltiplo de 7.")
+                    Escribir("El nÃºmero es positivo e impar pero no es mÃºltiplo de 7.")
                 FinSi
             FinSi
         Sino
 			// En caso de ser negativo y mayor o igual a -20
-            Escribir("El número es negativo pero no es menor que -20.")
+            Escribir("El nÃºmero es negativo pero no es menor que -20.")
         FinSi
     FinSi
 FinFuncion
 
-Funcion precioFinal = calcularPrecioPitajaya(tipo, tamaño)
+Funcion precioFinal = calcularPrecioPitajaya(tipo, tamaÃ±o)
     Definir precioInicial Como Real
     Definir precioFinal Como Real
     Definir descuento Como Real
     Definir iva Como Real
 	
-    // Determina el precio inicial según el tipo y tamaño
+    // Determina el precio inicial segÃºn el tipo y tamaÃ±o
     Si tipo == "Amarilla" Entonces
-        Si tamaño == "1" Entonces
+        Si tamaÃ±o == "1" Entonces
             precioInicial = 10
         Sino
             precioInicial = 10 + (10 * 0.15)
         FinSi
     Sino
-        Si tamaño == "1" Entonces
+        Si tamaÃ±o == "1" Entonces
             precioInicial = 10 - 20
         Sino
             precioInicial = 10 - (10 * 0.20)
@@ -218,15 +218,15 @@ FinFuncion
 
 Funcion evaluarNumero2(numero)
     Si numero % 2 == 0 y numero < 10 Entonces
-        Escribir("El número es par y menor que 10.")
+        Escribir("El nÃºmero es par y menor que 10.")
     Sino
         Si numero < 0 Y numero % 2 == 0 Entonces
-            Escribir("El número es negativo e impar.")
+            Escribir("El nÃºmero es negativo e impar.")
         Sino
             Si numero < 0 y numero % 5 == 0 Entonces
-                Escribir("El número es negativo y divisible por 5.")
+                Escribir("El nÃºmero es negativo y divisible por 5.")
             Sino
-                Escribir("El número no cumple ninguna de las condiciones.")
+                Escribir("El nÃºmero no cumple ninguna de las condiciones.")
             FinSi
         FinSi
     FinSi
@@ -248,7 +248,7 @@ Funcion precioVenta = calcularPrecioVenta(clave, costoMateriaPrima)
         FinSi
     FinSi
 	
-    // Calcula el costo de fabricación
+    // Calcula el costo de fabricaciÃ³n
     Si clave == 2 o clave == 5 Entonces
         costoFabricacion = costoMateriaPrima * 0.30
     Sino
@@ -288,9 +288,9 @@ Funcion numeroInverso = esCapicua(numero)
 	FinMientras
 	
 	Si numeroOriginal == numeroInvertido Entonces
-		numeroInverso = Verdadero  // Es capicúa
+		numeroInverso = Verdadero  // Es capicÃºa
 	Sino
-		numeroInverso = Falso  // No es capicúa
+		numeroInverso = Falso  // No es capicÃºa
 	FinSi
 FinFuncion
 
@@ -338,19 +338,19 @@ Funcion esPerfecto = esNumeroPerfecto(numero)
     FinPara
 	
     Si sumaDeNumerosDivisores == numero Entonces
-        esUnNumeroPerfecto = Verdadero  // Es un número perfecto
+        esUnNumeroPerfecto = Verdadero  // Es un nÃºmero perfecto
     Sino
-        esUnNumeroPerfecto = Falso  // No es un número perfecto
+        esUnNumeroPerfecto = Falso  // No es un nÃºmero perfecto
     FinSi
 FinFuncion
 
 Funcion esPrimo = esNumeroPrimo(numero)
 	Si numero <= 1 Entonces
-        esPrimo = Falso  // Los números menores o iguales a 1 no son primos
+        esPrimo = Falso  // Los nÃºmeros menores o iguales a 1 no son primos
 		Sino Si numero <= 3 Entonces
 				esPrimo = Verdadero  // 2 y 3 son primos
 		Sino Si numero % 2 == 0 o numero % 3 == 0 Entonces
-				esPrimo = Falso  // Los múltiplos de 2 y 3 no son primos
+				esPrimo = Falso  // Los mÃºltiplos de 2 y 3 no son primos
 			FinSi
 		FinSi
     FinSi
@@ -359,7 +359,7 @@ Funcion esPrimo = esNumeroPrimo(numero)
     i = 5
     Mientras i * i <= numero Hacer
         Si numero % i == 0 o numero % (i + 2) == 0 Entonces
-            esPrimo = Falso  // Si es divisible por algún número mayor a 3, no es primo
+            esPrimo = Falso  // Si es divisible por algÃºn nÃºmero mayor a 3, no es primo
         FinSi
         i = i + 6
     FinMientras
@@ -368,13 +368,13 @@ Funcion esPrimo = esNumeroPrimo(numero)
 FinFuncion
 
 Funcion primo = _esPrimo(numero)
-	Para i = 2 Hasta numero - 1 Con Paso 1 Hacer
+	Para i = 2 Hasta numero - 1 Hacer
 		Si numero % i == 0 Entonces
 			primo = Falso
+		SiNo
+			primo = Verdadero
 		FinSi
 	FinPara
-	
-	primo = Verdadero
 FinFuncion
 
 Funcion sonPrimosGemelos = sonNumerosPrimosGemelos(numero1, numero2)
@@ -407,9 +407,9 @@ Funcion sonPrimosAmigos = sonNumerosPrimosAmigos(numero1, numero2)
 	Definir primo1, primo2 Como Logico
 	
 	Si (_esPrimo(numero1) Y _esPrimo(numero2) Y _sumaDivisores(numero1) == _sumaDivisores(numero2)) Entonces
-		sonPrimosAmigos = Verdadero
+		sonPrimosAmigos = "Los nÃºmeros son primos amigos."
 	Sino
-		sonPrimosAmigos = Falso
+		sonPrimosAmigos = "Los nÃºmeros no son primos amigos."
 	FinSi
 FinFuncion
 
@@ -513,7 +513,7 @@ Funcion procesarSecuencia(secuencia)
             contMultiplos3 = contMultiplos3 + 1
         FinSi
         
-        // Leer el siguiente número de la secuencia
+        // Leer el siguiente nÃºmero de la secuencia
         Leer secuencia
     FinMientras
     
@@ -534,10 +534,10 @@ Funcion procesarSecuenciaYArreglo(longitudArreglo)
 		Leer secuencia
 		
 		Si secuencia <> 0 Entonces
-			// Agregar el número al arreglo
+			// Agregar el nÃºmero al arreglo
 			arreglo[i] = secuencia
 			exponentes[i] = secuencia^2
-			// Sumar el cuadrado del número
+			// Sumar el cuadrado del nÃºmero
 			sumaCuadrados = sumaCuadrados + (secuencia * secuencia)
 		FinSi
 	Fin Para
@@ -566,7 +566,7 @@ Funcion procesarSecuencia2(longitudArreglo)
             sumaMultiplos5 = sumaMultiplos5 + secuencia
         FinSi
         
-        // Leer el siguiente número de la secuencia
+        // Leer el siguiente nÃºmero de la secuencia
         Leer secuencia
     FinMientras
     
@@ -585,13 +585,13 @@ Funcion procesarSecuenciaYArreglo2(secuencia, longitudArreglo)
 	
     Mientras secuencia >= 0 Y contador < longitudArreglo Hacer
 		contador = contador + 1
-        // Agregar el número al arreglo
+        // Agregar el nÃºmero al arreglo
         arreglo[contador] = secuencia
-		// Agregar el número elevado al exponente
+		// Agregar el nÃºmero elevado al exponente
 		exponentes[contador] = secuencia^3
-        // Sumar el cubo del número
+        // Sumar el cubo del nÃºmero
         sumaCubos = sumaCubos + (secuencia * secuencia * secuencia)
-        // Leer el siguiente número de la secuencia
+        // Leer el siguiente nÃºmero de la secuencia
 		Si contador <> longitudArreglo Entonces
 			Leer secuencia
 		FinSi
@@ -627,15 +627,15 @@ Funcion duplicarElementos(longitudArreglo)
 	Definir numero, contador Como Entero
 	Dimension arreglo[longitudArreglo]
 	
-	Escribir "Ingrese una secuencia de números separados por espacios (ingrese -1 para finalizar):"
+	Escribir "Ingrese una secuencia de nÃºmeros separados por espacios (ingrese -1 para finalizar):"
 	Leer numero
 	
 	Mientras numero <> -1 Y contador < longitudArreglo Hacer
 		contador = contador + 1
-        // Agregar el número al arreglo
+        // Agregar el nÃºmero al arreglo
         arreglo[contador] = numero
 		
-		// Leer el siguiente número de la secuencia
+		// Leer el siguiente nÃºmero de la secuencia
 		Si contador <> longitudArreglo Entonces
 			Leer numero
 		FinSi
@@ -665,15 +665,247 @@ Funcion contX = contarX(secuencia)
 	FinMientras
 FinFuncion
 
+Funcion filtrarPares(secuencia, longitudArreglo)
+	Definir contador Como Entero
+	Dimension arreglo[longitudArreglo]
+	Dimension arregloPares[longitudArreglo]
+	
+	contador = 0
+	
+	Mientras secuencia <> 0 Y contador < longitudArreglo Hacer
+		contador = contador + 1
+        // Agregar el nÃºmero al arreglo
+        arreglo[contador] = secuencia
+		
+        // Leer el siguiente nÃºmero de la secuencia
+		Si contador <> longitudArreglo Entonces
+			Leer secuencia
+		FinSi
+    FinMientras
+	
+    Para i = 1 Hasta longitudArreglo Hacer
+        Si arreglo[i] % 2 == 0 Entonces
+            arregloPares[i] = arreglo[i]
+        FinSi
+    FinPara
+    
+	Escribir "arreglo original = "
+	_imprimirValoresArreglo(arreglo, longitudArreglo)
+	
+	Escribir "arreglo pares = "
+	_imprimirValoresArreglo(arregloPares, longitudArreglo)
+FinFuncion
 
+Funcion salida = valoresMayoresA5(numero1, numero2)
+    Definir salida Como Cadena
+	
+    salida = ""
+	
+    Para i = numero1 Hasta numero2 Hacer
+        Si i > 5 Entonces
+            salida = salida + ConvertirATexto(i) + " "
+        FinSi
+    FinPara
+FinFuncion
 
+Funcion calcularPromedioYContarEdades(edad, longitudArreglo)
+	Definir contador Como Entero
+    Definir totalEdades Como Real
+    Definir cantMayorIgual18 Como Entero
+    Definir cantMenor18 Como Entero
+	Dimension edades[longitudArreglo]
+    
+    totalEdades = 0
+    cantMayorIgual18 = 0
+    cantMenor18 = 0
+	contador = 0
+	
+	Mientras numero <> -1 Y contador < longitudArreglo Hacer
+		contador = contador + 1
+        // Agregar el nÃºmero al arreglo
+        edades[contador] = edad
+		// Leer el siguiente nÃºmero de la secuencia
+		Si contador <> longitudArreglo Entonces
+			Leer edad
+		FinSi
+	FinMientras
+	
+    Para i = 1 Hasta longitudArreglo Hacer
+        totalEdades = totalEdades + edades[i]
+		
+        Si edades[i] >= 18 Entonces
+            cantMayorIgual18 = cantMayorIgual18 + 1
+        Sino
+            cantMenor18 = cantMenor18 + 1
+        FinSi
+    FinPara
+    
+    promedioGeneral = totalEdades / longitudArreglo
+	
+	Escribir "promedioGeneral = ", promedioGeneral
+	Escribir "cantMayorIgual18 = ", cantMayorIgual18
+	Escribir "promedioMayorIgual18 = ", promedioGeneral  // Ya que es el mismo promedio
+	Escribir "cantMenor18 = ", cantMenor18
+	Escribir "promedioMenor18 = ", promedioGeneral  // Ya que es el mismo promedio
+FinFuncion
 
+Funcion impares = encontrarImparesEntre(numero1, numero2)
+    Definir impares Como Cadena
+    impares = ""
+    
+    Para i = numero1 + 1 Hasta numero2 - 1 Hacer
+        Si i % 2 <> 0 Entonces
+            impares = impares + ConvertirATexto(i) + " "
+        FinSi
+    FinPara
+FinFuncion
 
+Funcion calcularSueldoMasAltoYPromedio(sueldo, longitudArreglo)
+	Definir contador Como Entero
+    Definir sueldoMasAlto Como Real
+    Definir totalSueldos Como Real
+    Dimension sueldos[longitudArreglo]
+	
+    sueldoMasAlto = sueldos[1]
+    totalSueldos = 0
+    contador = 0
+	
+	Mientras numero <> -1 Y contador < longitudArreglo Hacer
+		contador = contador + 1
+        // Agregar el nÃºmero al arreglo
+        sueldos[contador] = sueldo
+		// Leer el siguiente nÃºmero de la secuencia
+		Si contador <> longitudArreglo Entonces
+			Leer sueldo
+		FinSi
+	FinMientras
+	
+    Para i = 1 Hasta longitudArreglo Hacer
+        Si sueldos[i] > sueldoMasAlto Entonces
+            sueldoMasAlto = sueldos[i]
+        FinSi
+        totalSueldos = totalSueldos + sueldos[i]
+    FinPara
+    
+    promedioSueldos = totalSueldos / longitudArreglo
+	
+	Escribir "SueldoMasAlto = ", sueldoMasAlto
+    Escribir "cantidadSueldos = ", longitudArreglo
+    Escribir "promedioGeneral = ", promedioSueldos
+FinFuncion
+
+Funcion respuesta = fraseMasLarga(frase1, frase2)
+	Definir respuesta Como Caracter
+	
+	Si Longitud(frase1) > Longitud(frase2) Entonces
+		respuesta = "La primera frase es mÃ¡s larga."
+	SiNo Si Longitud(frase1) < Longitud(frase2) Entonces
+			respuesta = "La segunda frase es mÃ¡s larga."
+		Sino
+			respuesta = "Ambas frases tienen la misma longitud."
+		FinSi
+	FinSi
+FinFuncion
+
+Funcion contador = contarCaracteresEspeciales(cadena)
+    Definir contador Como Entero
+	
+    contador = 0
+	
+	Para i = 1 Hasta Longitud(cadena) Hacer
+		Si Subcadena(cadena, i, i) == "," O Subcadena(cadena, i, i) == "." O Subcadena(cadena, i, i) == ";" O Subcadena(cadena, i, i) == ":" Entonces
+			contador = contador + 1
+		FinSi
+	FinPara
+FinFuncion
+
+Funcion contarCaracteres(cadena)
+    Definir vocales, consonantes, digitos Como Entero
+	Definir caracter Como Caracter
+	
+    vocales = 0
+    consonantes = 0
+    digitos = 0
+	
+	cadena = Minusculas(cadena) // Convertir la cadena a minÃºsculas para contar vocales
+	
+    Para i = 1 Hasta Longitud(cadena) Hacer
+        caracter = Subcadena(cadena, i, i)
+		Si caracter >= "a" y caracter <= "z" Entonces
+			Si caracter == "a" o caracter == "e" o caracter == "i" o caracter == "o" o caracter == "u" Entonces
+				vocales = vocales + 1
+			Sino
+				consonantes = consonantes + 1
+			FinSi
+		SiNo Si caracter >= "0" y caracter <= "9" Entonces
+				digitos = digitos + 1
+			FinSi
+		FinSi
+	FinPara
+	
+	Escribir "Vocales: ", vocales
+	Escribir "Consonantes: ", consonantes
+	Escribir "DÃ­gitos: ", digitos
+FinFuncion
+
+Funcion palabras = contarPalabras2(frase)
+    Definir palabras Como Entero
+	
+    palabras = 0
+    espacios = 0
+	
+	Para i = 1 Hasta Longitud(frase) Hacer
+		caracter = Subcadena(cadena, i, i)
+        Si caracter == " " O caracter == "  " Entonces
+            espacios = espacios + 1
+        FinSi
+    FinPara
+	
+    palabras = espacios + 1
+FinFuncion
+
+Funcion suma = sumarDigitosCedula(cedula)
+    Definir suma Como Entero
+	
+    suma = 0
+	
+	Para i = 1 Hasta Longitud(cedula) Hacer
+		caracter = Subcadena(cadena, i, i)
+        Si caracter >= "0" y caracter <= "9" Entonces
+            suma = suma + ConvertirANumero(caracter)
+        FinSi
+    FinPara
+FinFuncion
+
+Funcion respuesta = esPalindroma(palabra)
+    Definir longitudPalabra Como Entero
+	Definir respuesta Como Caracter
+	
+	longitudPalabra = Longitud(palabra)
+	
+    Para i = 1 Hasta longitudPalabra Hacer
+		Si Subcadena(palabra, i, i) == Subcadena(palabra, longitudPalabra +1 - i, longitudPalabra +1 - i) Entonces
+			respuesta = "Es palÃ­ndroma"
+		SiNo
+			respuesta = "No es palÃ­ndroma"
+		FinSi
+	FinPara
+FinFuncion
+
+Funcion respuesta = encontrarPosicionCaracter(cadena, caracter)
+	Para i = 1 Hasta Longitud(cadena) Hacer
+		Si Subcadena(cadena, i, i) == caracter Entonces
+			respuesta = "El carÃ¡cter " + caracter + " se encuentra en la posiciÃ³n " + ConvertirATexto(i)
+		SiNo
+			respuesta = "El carÃ¡cter " + caracter + " no se encontrÃ³ en la cadena"
+        FinSi
+    FinPara
+FinFuncion
 
 // Function to display the main menu
 Funcion mostrarMenuPrincipal(menuPrincipal, longitudMenu)
 	_borrarPantalla
-	Escribir "Menú Principal"
+	Escribir "MenÃº Principal"
 	
 	Para index = 1 Hasta longitudMenu Con Paso 1 Hacer
 		//Escribir menuPrincipal[index]
@@ -711,9 +943,9 @@ Funcion realizarOperacionesConNumeros(opcionSeleccionada)
 		
 		Segun opcionSeleccionada Hacer
 			Caso 1:
-				// Llama a la función correspondiente con argumentos
+				// Llama a la funciÃ³n correspondiente con argumentos
 				// Ejemplo: funcionNumeros(arg1, arg2)
-				// Llamando a la función con la cantidad de colas
+				// Llamando a la funciÃ³n con la cantidad de colas
 				Escribir "Ingrese la cantidad de colas"
 				Leer cantidad
 				
@@ -722,14 +954,14 @@ Funcion realizarOperacionesConNumeros(opcionSeleccionada)
 				// Clcular la ganancia de un productor de uva
 				Escribir "Ingrese el tipo de uva A o B"
 				Leer tipo
-				Escribir  "Ingrese el tamaño 1 o 2"
-				Leer tamaño
+				Escribir  "Ingrese el tamaÃ±o 1 o 2"
+				Leer tamaÃ±o
 				
-				ganancia = calcularGananciaUva(tipo, tamaño)
+				ganancia = calcularGananciaUva(tipo, tamaÃ±o)
 				
 				Escribir "Ganancia obtenida: $", ganancia
 			Caso 3:
-				// Llamando a la función con los números que desees dividir
+				// Llamando a la funciÃ³n con los nÃºmeros que desees dividir
 				Escribir "Ingrese el dividendo"
 				Leer dividendo
 				Escribir "Ingrese el divisor"
@@ -739,29 +971,29 @@ Funcion realizarOperacionesConNumeros(opcionSeleccionada)
 				
 				Escribir "Residuo: ", residuo
 			Caso 4:
-				Escribir "Ingrese el número de cita: "
+				Escribir "Ingrese el nÃºmero de cita: "
 				Leer numeroCita
 				
 				calcularCostoConsulta(numeroCita)
 			Caso 5:
-				Escribir("Ingrese el primer número: ")
+				Escribir("Ingrese el primer nÃºmero: ")
 				Leer num1
 				
-				Escribir("Ingrese el segundo número: ")
+				Escribir("Ingrese el segundo nÃºmero: ")
 				Leer num2
 				
-				Escribir("Ingrese el tercer número: ")
+				Escribir("Ingrese el tercer nÃºmero: ")
 				Leer num3
 				
-				Escribir("Ingrese el cuarto número: ")
+				Escribir("Ingrese el cuarto nÃºmero: ")
 				Leer num4
 				
 				esDivisor = verificarRelacionesNumericas(num1, num2, num3, num4)
 				
 				Si esDivisor Entonces
-					Escribir("El número 3 es divisor del número 4.")
+					Escribir("El nÃºmero 3 es divisor del nÃºmero 4.")
 				SiNo
-					Escribir("El número 3 no es divisor del número 4.")
+					Escribir("El nÃºmero 3 no es divisor del nÃºmero 4.")
 				FinSi
 			Caso 6:
 				Escribir "Ingrese el tipo de tarjeta (1, 2, 3 u otro): "
@@ -769,16 +1001,16 @@ Funcion realizarOperacionesConNumeros(opcionSeleccionada)
 				
 				nuevoLimite = calcularNuevoLimite(tipoTarjeta)
 				
-				Escribir "Nuevo límite de crédito: $", nuevoLimite
+				Escribir "Nuevo lÃ­mite de crÃ©dito: $", nuevoLimite
 				
 			Caso 7:
-				Escribir "Ingrese el número 1: "
+				Escribir "Ingrese el nÃºmero 1: "
 				Leer num1
-				Escribir "Ingrese el número 2: "
+				Escribir "Ingrese el nÃºmero 2: "
 				Leer num2
-				Escribir "Ingrese el número 3: "
+				Escribir "Ingrese el nÃºmero 3: "
 				Leer num3
-				Escribir "Ingrese el número 4: "
+				Escribir "Ingrese el nÃºmero 4: "
 				Leer num4
 				
 				verificarDivisibilidadYRelacion(num1, num2, num3, num4)
@@ -787,31 +1019,31 @@ Funcion realizarOperacionesConNumeros(opcionSeleccionada)
 				Leer tipoTarjeta
 				
 				aumento = calcularNuevoAumento(tipoTarjeta)
-				Escribir "El nuevo límite de crédito es: $", aumento
+				Escribir "El nuevo lÃ­mite de crÃ©dito es: $", aumento
 			Caso 9:
-				Escribir "Ingrese un número: "
+				Escribir "Ingrese un nÃºmero: "
 				Leer numero
 				
 				evaluarNumero(numero)
 				
 			Caso 10:
-				Definir tipo, tamaño Como Cadena
+				Definir tipo, tamaÃ±o Como Cadena
 				Escribir "Ingrese el tipo de pitajaya (Amarilla o Colorada): "
 				Leer tipo
-				Escribir "Ingrese el tamaño de pitajaya (1 o 2): "
-				Leer tamaño
+				Escribir "Ingrese el tamaÃ±o de pitajaya (1 o 2): "
+				Leer tamaÃ±o
 				
-				precioEmbarque = calcularPrecioPitajaya(tipo, tamaño)
+				precioEmbarque = calcularPrecioPitajaya(tipo, tamaÃ±o)
 				Escribir "El precio de embarque es: $", precioEmbarque
 				
 			Caso 11:
-				Escribir "Ingrese un número: "
+				Escribir "Ingrese un nÃºmero: "
 				Leer numero
 				
 				evaluarNumero2(numero)
 				
 			Caso 12:
-				Escribir "Ingrese la clave del artículo (1, 2, 3, 4, 5 o 6): "
+				Escribir "Ingrese la clave del artÃ­culo (1, 2, 3, 4, 5 o 6): "
 				Leer clave
 				Escribir "Ingrese el costo de materia prima: "
 				Leer costoMateriaPrima
@@ -821,102 +1053,98 @@ Funcion realizarOperacionesConNumeros(opcionSeleccionada)
 				
 			Caso 13:
 				Definir numero Como Caracter
-				Escribir "Ingrese un número entero: "
+				Escribir "Ingrese un nÃºmero entero: "
 				Leer numero
 				
 				cantidadDigitos = calcularCantidadDigitos(numero)
-				Escribir "El número tiene ", cantidadDigitos, " dígitos."
+				Escribir "El nÃºmero tiene ", cantidadDigitos, " dÃ­gitos."
 				
 			Caso 14:
-				// Función para determinar si un número es capicúa
+				// FunciÃ³n para determinar si un nÃºmero es capicÃºa
 				Definir numero Como Entero
-				Escribir "Ingrese un número: "
+				Escribir "Ingrese un nÃºmero: "
 				Leer numero
 				
 				numeroInverso = esCapicua(numero)
 				Si numeroInverso Entonces
-					Escribir "El número es capicúa."
+					Escribir "El nÃºmero es capicÃºa."
 				Sino
-					Escribir "El número no es capicúa."
+					Escribir "El nÃºmero no es capicÃºa."
 				FinSi
 				
 			Caso 15:
-				// Función para presentar los divisores de un número
-				Escribir "Ingrese un número: "
+				// FunciÃ³n para presentar los divisores de un nÃºmero
+				Escribir "Ingrese un nÃºmero: "
 				Leer numero
 				
 				presentarDivisores(numero)
 				
 			Caso 16:
-				// Función para calcular la suma de los divisores de un número
-				Escribir "Ingrese un número: "
+				// FunciÃ³n para calcular la suma de los divisores de un nÃºmero
+				Escribir "Ingrese un nÃºmero: "
 				Leer numero
 				
 				resultado = sumaDivisores(numero)
 				Escribir "La suma de los divisores de ", numero, " es: ", resultado
 			Caso 17:
-				// Función para contar la cantidad de divisores de un número
+				// FunciÃ³n para contar la cantidad de divisores de un nÃºmero
 				Definir numero Como Entero
-				Escribir "Ingrese un número: "
+				Escribir "Ingrese un nÃºmero: "
 				Leer numero
 				
 				cantidadDivisores = contarDivisores(numero)
-				Escribir "El número tiene ", cantidadDivisores, " divisores."
+				Escribir "El nÃºmero tiene ", cantidadDivisores, " divisores."
 				
 			Caso 18:
-				// Función para determinar si un número es perfecto
-				Escribir "Ingrese un número: "
+				// FunciÃ³n para determinar si un nÃºmero es perfecto
+				Escribir "Ingrese un nÃºmero: "
 				Leer numero
 				
 				esPerfecto = esNumeroPerfecto(numero)
 				Si esPerfecto Entonces
-					Escribir "El número es perfecto."
+					Escribir "El nÃºmero es perfecto."
 				Sino
-					Escribir "El número no es perfecto."
+					Escribir "El nÃºmero no es perfecto."
 				FinSi
 				
 			Caso 19:
-				// Función para determinar si un número es primo
-				Escribir "Ingrese un número: "
+				// FunciÃ³n para determinar si un nÃºmero es primo
+				Escribir "Ingrese un nÃºmero: "
 				Leer numero
 				
 				esPrimo = esNumeroPrimo(numero)
 				Si esPrimo Entonces
-					Escribir "El número es primo."
+					Escribir "El nÃºmero es primo."
 				Sino
-					Escribir "El número no es primo."
+					Escribir "El nÃºmero no es primo."
 				FinSi
 				
 			Caso 20:
 				Definir numero1, numero2 Como Entero
-				Escribir "Ingrese el primer número: "
+				Escribir "Ingrese el primer nÃºmero: "
 				Leer numero1
-				Escribir "Ingrese el segundo número: "
+				Escribir "Ingrese el segundo nÃºmero: "
 				Leer numero2
 				
 				sonPrimosGemelos = sonNumerosPrimosGemelos(numero1, numero2)
 				Si sonPrimosGemelos Entonces
-					Escribir "Los números son primos gemelos."
+					Escribir "Los nÃºmeros son primos gemelos."
 				Sino
-					Escribir "Los números no son primos gemelos."
+					Escribir "Los nÃºmeros no son primos gemelos."
 				FinSi
 				
 			Caso 21:
-				// Función para determinar si dos números son primos amigos
-				Escribir "Ingrese el primer número: "
+				// FunciÃ³n para determinar si dos nÃºmeros son primos amigos
+				Escribir "Ingrese el primer nÃºmero: "
 				Leer numero1
-				Escribir "Ingrese el segundo número: "
+				Escribir "Ingrese el segundo nÃºmero: "
 				Leer numero2
 				
 				sonPrimosAmigos = sonNumerosPrimosAmigos(numero1, numero2)
-				Si sonPrimosAmigos Entonces
-					Escribir "Los números son primos amigos."
-				Sino
-					Escribir "Los números no son primos amigos."
-				FinSi
+				Escribir sonPrimosAmigos
 			// TODO Agregar mas aqui
 			De Otro Modo:
-				Escribir "Opción no válida. Intente de nuevo."
+				Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
 		Fin Segun
 	Hasta Que opcionSeleccionada == 22 // TODO Ajustar este limite al final
 	
@@ -933,7 +1161,7 @@ Funcion realizarOperacionesConCadenasYArreglos(opcionSeleccionada)
 		
 		Segun opcionSeleccionada Hacer
 			Caso 1:
-				// Llama a la función correspondiente con argumentos
+				// Llama a la funciÃ³n correspondiente con argumentos
 				// Ejemplo: funcionNumeros(arg1, arg2)
 				// Algoritmo para presentar la secuencia
 				Escribir "Ingrese el valor de n: "
@@ -994,51 +1222,121 @@ Funcion realizarOperacionesConCadenasYArreglos(opcionSeleccionada)
 				
 				procesarSecuenciaYArreglo2(secuencia, longitudArreglo)
 			Caso 9:
-				// Función para contar palabras en una frase
+				// FunciÃ³n para contar palabras en una frase
 				Escribir "Ingrese una frase:"
                 Leer frase
                 contPalabras = contarPalabras(frase)
 				
                 Escribir "contPalabras = ", contPalabras
 			Caso 10:
-				// Función para cambiar cada elemento del arreglo por su doble
-				Escribir "Ingrese la longitud del arreglo"
+				// FunciÃ³n para cambiar cada elemento del arreglo por su doble
+				Escribir "Ingrese la longitud del arreglo:"
 				Leer longitudArreglo
 				
 				duplicarElementos(longitudArreglo)
 			Caso 11:
-				// Función para contar la cantidad de "x" en una secuencia de caracteres
+				// FunciÃ³n para contar la cantidad de "x" en una secuencia de caracteres
 				Escribir "Ingrese una secuencia de caracteres (termine con un punto):"
                 Leer secuencia
                 contX = contarX(secuencia)
 				
                 Escribir "contX = ", contX
 			Caso 12:
+				// FunciÃ³n para filtrar nÃºmeros pares de un arreglo
+				Escribir "Ingrese la longitud para el arreglo:"
+				Leer longitudArreglo
+				Escribir "Ingrese una secuencia de nÃºmeros separados por espacios (ingrese 0 para finalizar):"
+				Leer secuencia
 				
+				filtrarPares(secuencia, longitudArreglo)
 			Caso 13:
+				// FunciÃ³n para presentar valores mayores a 5 entre dos nÃºmeros
+				Escribir "Ingrese el primer nÃºmero:"
+                Leer numero1
+                Escribir "Ingrese el segundo nÃºmero:"
+                Leer numero2
+                salidaValores = valoresMayoresA5(numero1, numero2)
 				
+                Escribir "Valores mayores a 5:", salidaValores
 			Caso 14:
+				// Calcular promedio y contar edades
+				Escribir "Ingrese la cantidad de edades de los alumnos a considerar:"
+				Leer longitudArreglo
+				Escribir "Ingrese las edades de los alumnos (ingrese -1 para finalizar):"
+				Leer edad
 				
+				calcularPromedioYContarEdades(edad, longitudArreglo)
 			Caso 15:
+				// Encontrar impares entre dos nÃºmeros
+				Escribir "Ingrese el primer nÃºmero:"
+				Leer numero1
+				Escribir "Ingrese el segundo nÃºmero:"
+				Leer numero2
 				
+				salidaImpares = encontrarImparesEntre(numero1, numero2)
+				Escribir "Valores impares entre los dos nÃºmeros:", salidaImpares
 			Caso 16:
+				// Calcular sueldo mÃ¡s alto y promedio de sueldos
+				Escribir "Ingrese la cantidad de sueldos de los empleados a considerar:"
+				Leer longitudArreglo
+				Escribir "Ingrese los sueldos de los empleados (ingrese -1 para finalizar):"
+				Leer sueldo
 				
+				calcularSueldoMasAltoYPromedio(sueldo, longitudArreglo)
 			Caso 17:
+				// Comparar la longitud de dos frases
+				Escribir("Ingresa la primera frase: ")
+				Leer frase1
+				Escribir("Ingresa la segunda frase: ")
+				Leer frase2
 				
+				respuesta = fraseMasLarga(frase1, frase2)
+				Escribir respuesta
 			Caso 18:
+				// Ejercicio 18: Contar ,.;: en una cadena
+				Escribir("Ingresa una cadena de texto: ")
+				Leer cadena
 				
+				contador = contarCaracteresEspeciales(cadena)
+				Escribir "Hay ", contador, " caracteres especiales (,.;:) en la cadena."
 			Caso 19:
-				
+				// Contar vocales, consonantes y dÃ­gitos en una cadena
+				Escribir("Ingresa una cadena de texto: ")
+				Leer cadena
+				contarCaracteres(cadena)
 			Caso 20:
+				// Contar palabras en una frase con espacios
+				Escribir "Ingresa una frase: "
+				Leer frase
 				
+				palabras = contarPalabras2(frase)
+				Escribir "Hay ", palabras, " palabras en la frase."
 			Caso 21:
+				// Sumar dÃ­gitos de una cÃ©dula
+				Escribir "Ingresa el nÃºmero de cÃ©dula: "
+				Leer cedula
 				
+				suma = sumarDigitosCedula(cedula)
+				Escribir "La suma de los dÃ­gitos de la cÃ©dula es: ", suma
 			Caso 22:
+				// Ejercicio 22: Comprobar si una palabra es palÃ­ndroma
+				Escribir("Ingresa una palabra: ")
+				Leer palabra
 				
+				respuesta = esPalindroma(palabra)
+				Escribir respuesta
 			Caso 23:
+				// Ejercicio 23: Encontrar la posiciÃ³n de un carÃ¡cter en una cadena
+				Escribir "Ingresa una cadena de texto: "
+				Leer cadena
+				Escribir "Ingresa un carÃ¡cter para buscar en la cadena: "
+				Leer caracter
 				
+				respuesta = encontrarPosicionCaracter(cadena, caracter)
+				Escribir respuesta
+			// TODO Agregar mas aqui
 			De Otro Modo:
-				Escribir "Opción no válida. Intente de nuevo."
+				Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
 		Fin Segun
 	Hasta Que opcionSeleccionada == 24 // TODO Ajustar este limite al final
 	
@@ -1061,12 +1359,12 @@ Algoritmo AlgoritmoPrincipal
     Dimension menuNumeros[longitudMenuNumeros] 
     Dimension menuCadenasYArreglos[longitudMenuCadenasYArreglos]
     
-	menuPrincipal[1] = "Números"
+	menuPrincipal[1] = "NÃºmeros"
 	menuPrincipal[2] = "Cadenas y Arreglos"
 	menuPrincipal[3] = "Salir"
 	
 	menuNumeros[1] = "calcularCostoColas(cantidad)"
-	menuNumeros[2] = "calcularGananciaUva(tipo, tamaño)"
+	menuNumeros[2] = "calcularGananciaUva(tipo, tamaÃ±o)"
 	menuNumeros[3] = "obtenerResiduo(dividendo, divisor)"
 	menuNumeros[4] = "calcularCostoConsulta(numeroCita)"
 	menuNumeros[5] = "verificarRelacionesNumericas(num1, num2, num3, num4)"
@@ -1074,7 +1372,7 @@ Algoritmo AlgoritmoPrincipal
 	menuNumeros[7] = "verificarDivisibilidadYRelacion(num1, num2, num3, num4)"
 	menuNumeros[8] = "calcularNuevoAumento(tipoTarjeta)"
 	menuNumeros[9] = "evaluarNumero(numero)"
-	menuNumeros[10] = "calcularPrecioPitajaya(tipo, tamaño)"
+	menuNumeros[10] = "calcularPrecioPitajaya(tipo, tamaÃ±o)"
 	menuNumeros[11] = "evaluarNumero2(numero)"
 	menuNumeros[12] = "calcularPrecioVenta(clave, costoMateriaPrima)"
 	menuNumeros[13] = "calcularCantidadDigitos(numero)"
@@ -1098,18 +1396,18 @@ Algoritmo AlgoritmoPrincipal
 	menuCadenasYArreglos[9] = "contarPalabras(frase)"
 	menuCadenasYArreglos[10] = "duplicarElementos(longitudArreglo)"
 	menuCadenasYArreglos[11] = "contarX(secuencia)"
-	menuCadenasYArreglos[12] = ""
-	menuCadenasYArreglos[13] = ""
-	menuCadenasYArreglos[14] = ""
-	menuCadenasYArreglos[15] = ""
-	menuCadenasYArreglos[16] = ""
-	menuCadenasYArreglos[17] = ""
-	menuCadenasYArreglos[18] = ""
-	menuCadenasYArreglos[19] = ""
-	menuCadenasYArreglos[20] = ""
-	menuCadenasYArreglos[21] = ""
-	menuCadenasYArreglos[22] = ""
-	menuCadenasYArreglos[23] = ""
+	menuCadenasYArreglos[12] = "filtrarPares(secuencia, longitudArreglo)"
+	menuCadenasYArreglos[13] = "valoresMayoresA5(numero1, numero2)"
+	menuCadenasYArreglos[14] = "calcularPromedioYContarEdades(edad, longitudArreglo)"
+	menuCadenasYArreglos[15] = "encontrarImparesEntre(numero1, numero2)"
+	menuCadenasYArreglos[16] = "calcularSueldoMasAltoYPromedio(sueldo, longitudArreglo)"
+	menuCadenasYArreglos[17] = "fraseMasLarga(frase1, frase2)"
+	menuCadenasYArreglos[18] = "contarCaracteresEspeciales(cadena)"
+	menuCadenasYArreglos[19] = "contarCaracteres(cadena)"
+	menuCadenasYArreglos[20] = "contarPalabras(frase)"
+	menuCadenasYArreglos[21] = "sumarDigitosCedula(cedula)"
+	menuCadenasYArreglos[22] = "esPalindroma(palabra)"
+	menuCadenasYArreglos[23] = "encontrarPosicionCaracter(cadena, caracter)"
 	
     Repetir
 		Repetir
@@ -1126,7 +1424,7 @@ Algoritmo AlgoritmoPrincipal
 						mostrarMenuCadenasYArreglos(menuCadenasYArreglos, longitudMenuCadenasYArreglos)
 						realizarOperacionesConCadenasYArreglos(opcionSeleccionada)
 					De Otro Modo:
-						Escribir "Opción no válida. Intente de nuevo."
+						Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
 				FinSegun
 			FinSi
 		Hasta Que opcionSeleccionada == 3
